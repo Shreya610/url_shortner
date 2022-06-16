@@ -1,0 +1,12 @@
+<h1>Welcome to short.com</h1>
+<h2>Please enter your url here</h2>
+<%= form_with url: "/", method: :post do |form| %>
+  
+  <%= form.text_field :url, :size => 100, :value => @url %>
+  <%= form.submit "Shorten" %>
+<% end %>  
+
+<% unless @short.nil? %>
+<h2>Here's your short URL!</h2>
+<%= @short %>
+<% end %>

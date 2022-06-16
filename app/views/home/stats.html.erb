@@ -1,0 +1,12 @@
+<h1>Analytics</h1>
+
+<% @shorts.each do |short| %>
+
+<h2><%= short.url %></h2>
+<br />Short Url: <%= short.shorturl %>
+<br />Total Clicks: <%= short.clicks %>
+<br />Ip Address: <%= short.ipaddress %>
+<br />Country: <%= short.country %>
+<% end %>
+
+
